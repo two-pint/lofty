@@ -6,7 +6,7 @@ import {Link} from 'react-router';
 import {ProductPrice} from './ProductPrice';
 import {useAside} from './Aside';
 import type {CartApiQueryFragment} from 'storefrontapi.generated';
-
+import styles from './AddToCartButton.module.css';
 type CartLine = OptimisticCartLine<CartApiQueryFragment>;
 
 /**

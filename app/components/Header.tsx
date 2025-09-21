@@ -7,6 +7,8 @@ import {
 } from '@shopify/hydrogen';
 import type {HeaderQuery, CartApiQueryFragment} from 'storefrontapi.generated';
 import {useAside} from '~/components/Aside';
+import styles from './Header.module.css';
+import loftyLogo from '~/assets/lofty_logo.svg';
 
 interface HeaderProps {
   header: HeaderQuery;
@@ -27,7 +29,7 @@ export function Header({
   return (
     <header className="header">
       <NavLink prefetch="intent" to="/" style={activeLinkStyle} end>
-        <strong>{shop.name}</strong>
+        <img src={loftyLogo} alt={shop.name} className={styles.logo} />
       </NavLink>
       <HeaderMenu
         menu={menu}
